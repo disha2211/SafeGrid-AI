@@ -31,13 +31,9 @@ Four objectives: (1) decentralised agents that propose actions, (2) a determinis
 
 ## Architecture
 
-```
-LLM / mock agent --proposal--> Coordinator --> Symbolic Safety Shield --validated action--> pandapower grid
-      ^                                              (approve | project | reject)                  |
-      +-------------------------- observations (voltages, loading, prices, SOC) <-------------------+
-                                                     |
-                                      SQLite + hash-chained safety log --> FastAPI (REST + WebSocket) --> React
-```
+<p align="center">
+  <img src="docs/mermaid-diagram-1790831210674.png" alt="Architecture Diagram" width="700">
+</p>
 
 Details: [`docs/architecture.md`](docs/architecture.md), [`docs/safety-shield.md`](docs/safety-shield.md), [`docs/api.md`](docs/api.md), [`docs/experiments.md`](docs/experiments.md).
 
